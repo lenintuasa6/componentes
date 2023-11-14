@@ -17,10 +17,18 @@ const routes: Routes = [
     loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
   },
   {
+    path: 'ion-avatar',
+    loadChildren: () => import('./pages/ion-avatar/ion-avatar.module').then( m => m.IonAvatarPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
     },
+  {
+    path: 'ion-button',
+    loadChildren: () => import('./pages/ion-button/ion-button.module').then( m => m.IonButtonPageModule)
+  },
 
   
   ];
