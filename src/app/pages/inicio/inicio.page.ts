@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { ComponentsModule } from '../../components/components.module';
+
 
 interface Componente {
   icon: string;
@@ -26,20 +29,29 @@ export class InicioPage implements OnInit {
       redirectTo: '/alert'
     },
     {
-      icon:'skull-outline',
+      icon:'person-circle-outline',
       name: 'Ion-Avatar',
       redirectTo: '/ion-avatar'
     },
     {
-      icon: 'toggle-outline',
+      icon: 'checkmark-circle-outline',
       name: 'Ion-Button',
       redirectTo: '/ion-button'
+    },
+    {
+      icon: 'folder-outline',
+      name: 'Input',
+      redirectTo: '/input'
     }
 
   ];
-  constructor() { }
+  constructor(private menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
-
+  mostrarMenu() {
+  this.menuCtrl.open('first');
+  }
+  
 }
+

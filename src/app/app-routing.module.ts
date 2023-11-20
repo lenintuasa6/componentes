@@ -29,6 +29,10 @@ const routes: Routes = [
     path: 'ion-button',
     loadChildren: () => import('./pages/ion-button/ion-button.module').then( m => m.IonButtonPageModule)
   },
+  {
+    path: 'input',
+    loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
+  },
 
   
   ];
